@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: grid;
+  /* grid-template: repeat(3, 1fr) / repeat(2, 1fr); */
+  grid-template: 150px 1fr 100px / 250px 1fr; /* Esto se hace para dimensionar al gusto o necesidad del proyecto */
+  grid-template-areas: "header header" "left contenido" "footer footer"; /* Relacionamos las clases del HTML dadas hacia las designaciones de espacio */
+  gap: 10px 10px;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: blue;
+}
+.left {
+  grid-area: left;
+  background-color: orange;
+}
+.contenido {
+  grid-area: contenido;
+  background-color: grey;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: green;
+}
+
+.item {
+  border: dashed red 1px;
+  padding: 10px;
+  border-radius: 10px;
+}

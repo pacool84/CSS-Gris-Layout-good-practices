@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template: 300px 100px 100px / 50% 200px 300px;
+  /*   column-gap: 50px; Espaciado entre columnas
+  row-gap: 30px;  Espaciado entre filas*/
+  gap: 10px 50px; /* Espaciado entre filas y columnas */
+}
+
+.item {
+  background-color: aqua;
+  border: dashed red 1px;
+  padding: 10px;
+}
+
+.item:nth-of-type(4) {
+  background-color: blue;
+  overflow: auto;
+  display: grid;
+  grid-template: 300px 100px 100px / 50% 200px 300px;
+}
